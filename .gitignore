@@ -3,3 +3,4 @@ ngrok*
 node_modules/*
 .venv/*
 cache/*
+web/cache/*
