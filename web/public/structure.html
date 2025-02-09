@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror Mirror</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="desktop.css">
+</head>
+<body>
+    <div class="left-column">
+        <img id="outputImage" src="generated_images/output.png" alt=" ">
+    </div>
+
+    <div class="right-column">
+
+        <img src="castle.png" alt="Castle" class="castle-image">
+
+        <div class="stars"></div>
+        
+        <div class="title">
+            <h2>Mirror Mirror</h2>
+        </div>
+
+        <div id="imageContainer">
+            <img id="displayedImage" src="" alt=" " class="content-image"/>
+        </div>
+        <img src = "frame3.png" alt=" " class = "image-frame">
+
+        <img id="appleImage" src = "apple.png" alt="" class = "apple1">
+        <img id="appleImage2" src = "apple2.png" alt="" class = "apple1">
+        <img id="snowwhite" src = "snowwhite.png" alt="" class = "snowwhite">
+
+        <button id="btn" class="button">Enter</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script> 
+    <script src="stars.js"></script>
+    <script src="desktop.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

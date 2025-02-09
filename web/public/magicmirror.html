@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  
+  
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="magicmirror.css">
+</head>
+<body>
+  <div class="mirror-container">
+    <video id="video" autoplay playsinline></video>
+    <img src="frame.png" class="frame-overlay">  
+    <!-- Overlay text (optional) -->
+    <div class="overlay">
+      <h1>Magic Mirror</h1>
+    </div>
+  </div>
+  
+  <!-- Particle effect container overlay -->
+  <div id="particles-js"></div>
+  
+  <!-- Second particle container for falling stars -->
+  <div id="falling-stars"></div>
+  
+  <!-- Hidden canvas for snapshot (if needed) -->
+  <canvas id="canvas" class="hidden"></canvas>
+  
+  <!-- Crystal button for taking a picture -->
+  <button id="snap" class="snap-btn"></button>
+  
+  <!-- Load Socket.IO (served from your server) -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Load particles.js library from a CDN -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Optional: load particles configuration -->
+  <script src="particles-config.js"></script>
+  <!-- Your custom JavaScript -->
+  <script src="phone.js"></script>
+</body>
+</html>

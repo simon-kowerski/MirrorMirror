@@ -1,0 +1,188 @@
+/* Basic reset and background styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    color: #fff;
+    z-index: 13; /* Keeps the frame above everything */
+  }
+  
+/* Overlay container with no background, border, or padding */
+.overlay {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  z-index: 4;
+  background: transparent !important;  /* Ensures no background */
+  border: none !important;  /* Removes any border */
+  padding: 0;
+  margin: 0;
+  backdrop-filter: none !important;  /* Ensures no blur effect */
+  box-shadow: none !important;  /* Ensures no shadow */
+  outline: none !important;  /* Prevents any outlines */
+  z-index: 11; /* Keeps the frame above everything */
+}
+
+
+
+
+.overlay h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;          /* Increase the font size as desired */
+  color: #ffffff;          /* Gold color */
+  background: transparent; /* Ensure no background is applied to the text */
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  white-space: nowrap;     /* Keep the text on one line */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* Optional: adds subtle depth */
+  z-index: 15; /* Keeps the frame above everything */
+}
+
+
+
+  /* Magic mirror container with gradient border */
+  .mirror-container {
+  position: relative;
+  width: 100vw;  /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  background: #000; /* Black background */
+}
+
+/* Frame Overlay */
+.frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;  /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensures the image covers the screen */
+  pointer-events: none; /* Prevents interference with interactions */
+  z-index: 10; /* Keeps the frame above everything */
+}
+
+  /* Overlay the frame image */
+  .mirror-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('frame.png') center/contain no-repeat;
+    pointer-events: none; /* Ensures clicks go through to interactive elements */
+    z-index: 10; /* Keeps it above everything else */
+  }
+  
+  /* Video fills the container */
+  .mirror-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+/* Define the keyframes for the fade animation */
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 0.13; }
+  }
+  
+  
+  .mirror-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('glass-animation.gif') center/cover no-repeat;
+    pointer-events: none;
+    z-index: 1000;
+    animation: fade 4.46s ease-in-out infinite;
+  }
+
+  /* Particle overlay container */
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;  /* Initially hidden; toggled via JS */
+    transition: opacity 0.3s ease;
+  }
+
+  #falling-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Above the video but below the frame */
+    pointer-events: none; /* Allows interaction below */
+  }
+  
+  /* Overlay text styling */
+  .overlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: -999;
+  }
+  
+  /* Crystal button styling */
+  .snap-btn {
+    position: absolute;
+    bottom: -20px;    /* Adjust vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    background: url('crystal.png') no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    z-index: 11;
+    outline: none;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Floating animation for the crystal button */
+  @keyframes float {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-50px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  .snap-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Hide the canvas by default */
+  .hidden {
+    display: none;
+  }
+  
