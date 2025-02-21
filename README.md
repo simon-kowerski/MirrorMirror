@@ -8,6 +8,12 @@ Mirror Mirror is a Generative AI project that wass developed in 24 hours for the
 - [Serene Siu](https://github.com/serenexy) (she/her) B.S. Computer Science, Minor Cognitive Science, Minor Physics
 - [Tim Wilburn](https://github.com/TimIsNotPro) (he/him) B.S. Mechanical Engineering
 
+## Boccer Sall
+Late at night where would I go\
+As I'm tossing to and fro\
+Underneath here __**lies**__ the key\
+Who knows what could it be
+
 ## Inspiration
 
 Every member of our group has a deep love for art. Our members draw, sing, compose music, and collectively play 8 instruments. With the advent of generative AI, it pained us to see artists being pushed to the side and replaced by machines. We, however, recognize the power and potential of these technologies to augment art and creativity while allow many people to collaborate on a single work. We want to provide everyone with the ability to contribute to something magical. Mirror mirror was born from this idea. We want everyone to have a space to share something the love in the world. Their art and photographs combined tell a story that deserves to be told.
